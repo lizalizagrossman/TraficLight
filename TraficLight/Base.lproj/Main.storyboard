@@ -1,24 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TraficLight" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gpl-Aa-iaE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzd-sz-Ac4">
+                                <rect key="frame" x="98" y="452" width="124" height="47"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="47" id="KW9-Ek-bRW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="124" id="dxd-YR-BGQ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="NEXT">
+                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="changeColor" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3t-mC-Tu6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-13-ccV">
+                                <rect key="frame" x="112" y="160.5" width="96" height="96"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpY-a7-to8">
+                                <rect key="frame" x="112" y="271.5" width="96" height="95.5"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qpY-a7-to8" secondAttribute="height" multiplier="1:1" id="Otg-17-b1F"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QK3-ht-Y8b">
+                                <rect key="frame" x="112" y="50" width="96" height="95.5"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="QK3-ht-Y8b" secondAttribute="height" multiplier="1:1" id="j2a-EA-6en"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Htw-nd-db8"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mq9-13-ccV" firstAttribute="leading" secondItem="QK3-ht-Y8b" secondAttribute="leading" id="0KJ-W0-EVk"/>
+                            <constraint firstItem="Htw-nd-db8" firstAttribute="bottom" secondItem="uzd-sz-Ac4" secondAttribute="bottom" constant="69" id="4Gl-vs-2AD"/>
+                            <constraint firstItem="QK3-ht-Y8b" firstAttribute="top" secondItem="Htw-nd-db8" secondAttribute="top" constant="50" id="6ov-bK-VRg"/>
+                            <constraint firstItem="mq9-13-ccV" firstAttribute="trailing" secondItem="qpY-a7-to8" secondAttribute="trailing" id="9JA-eF-0Nq"/>
+                            <constraint firstItem="qpY-a7-to8" firstAttribute="centerX" secondItem="uzd-sz-Ac4" secondAttribute="centerX" id="EeI-fh-DNK"/>
+                            <constraint firstItem="qpY-a7-to8" firstAttribute="top" secondItem="mq9-13-ccV" secondAttribute="bottom" constant="15" id="IrG-hm-eHO"/>
+                            <constraint firstItem="uzd-sz-Ac4" firstAttribute="top" secondItem="qpY-a7-to8" secondAttribute="bottom" constant="85" id="JFr-JR-cWj"/>
+                            <constraint firstItem="mq9-13-ccV" firstAttribute="top" secondItem="QK3-ht-Y8b" secondAttribute="bottom" constant="15" id="Mm8-nc-Pmt"/>
+                            <constraint firstItem="uzd-sz-Ac4" firstAttribute="centerX" secondItem="Gpl-Aa-iaE" secondAttribute="centerX" id="Q4o-UM-0zk"/>
+                            <constraint firstItem="mq9-13-ccV" firstAttribute="leading" secondItem="qpY-a7-to8" secondAttribute="leading" id="dj8-05-h18"/>
+                            <constraint firstItem="mq9-13-ccV" firstAttribute="width" secondItem="mq9-13-ccV" secondAttribute="height" multiplier="1:1" id="fGD-He-1Ip"/>
+                            <constraint firstItem="QK3-ht-Y8b" firstAttribute="centerX" secondItem="mq9-13-ccV" secondAttribute="centerX" id="pLx-Xl-FIM"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenSign" destination="qpY-a7-to8" id="VgF-Dw-jUf"/>
+                        <outlet property="nextColorButton" destination="uzd-sz-Ac4" id="cSU-iA-ztS"/>
+                        <outlet property="redSign" destination="QK3-ht-Y8b" id="ZR5-Sg-jWI"/>
+                        <outlet property="yellowSign" destination="mq9-13-ccV" id="mTO-Uf-bAR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="73.125" y="1.056338028169014"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

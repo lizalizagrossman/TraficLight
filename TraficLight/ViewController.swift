@@ -8,12 +8,22 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var greenSign: UIView!
+    @IBOutlet var yellowSign: UIView!
+    @IBOutlet var redSign: UIView!
+    @IBOutlet var nextColorButton: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        greenSign.layer.cornerRadius = 60
+        yellowSign.layer.cornerRadius = 60
+        redSign.layer.cornerRadius = 60
+       
     }
 
-
+    
+    @IBAction func changeColor() {
+    }
+    
 }
 
