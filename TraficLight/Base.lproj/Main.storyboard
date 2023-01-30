@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,37 +13,37 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TraficLight" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gpl-Aa-iaE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uzd-sz-Ac4">
-                                <rect key="frame" x="98" y="452" width="124" height="47"/>
+                                <rect key="frame" x="145" y="620" width="124" height="47"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="KW9-Ek-bRW"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="124" id="dxd-YR-BGQ"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="NEXT">
-                                    <color key="baseForegroundColor" systemColor="secondarySystemBackgroundColor"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
+                                </state>
                                 <connections>
                                     <action selector="changeColor" destination="BYZ-38-t0r" eventType="touchUpInside" id="H3t-mC-Tu6"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-13-ccV">
-                                <rect key="frame" x="112" y="160.5" width="96" height="96"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mq9-13-ccV">
+                                <rect key="frame" x="131.33333333333337" y="216.66666666666669" width="151.66666666666663" height="151.66666666666669"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpY-a7-to8">
-                                <rect key="frame" x="112" y="271.5" width="96" height="95.5"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpY-a7-to8">
+                                <rect key="frame" x="131.33333333333337" y="383.33333333333331" width="151.66666666666663" height="151.66666666666669"/>
                                 <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="qpY-a7-to8" secondAttribute="height" multiplier="1:1" id="Otg-17-b1F"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QK3-ht-Y8b">
-                                <rect key="frame" x="112" y="50" width="96" height="95.5"/>
+                            <view clipsSubviews="YES" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QK3-ht-Y8b">
+                                <rect key="frame" x="131.33333333333337" y="50" width="151.66666666666663" height="151.66666666666666"/>
                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QK3-ht-Y8b" secondAttribute="height" multiplier="1:1" id="j2a-EA-6en"/>
@@ -53,23 +53,24 @@
                         <viewLayoutGuide key="safeArea" id="Htw-nd-db8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="mq9-13-ccV" firstAttribute="leading" secondItem="QK3-ht-Y8b" secondAttribute="leading" id="0KJ-W0-EVk"/>
+                            <constraint firstAttribute="centerX" secondItem="QK3-ht-Y8b" secondAttribute="centerX" id="1XW-Gu-mXH"/>
                             <constraint firstItem="Htw-nd-db8" firstAttribute="bottom" secondItem="uzd-sz-Ac4" secondAttribute="bottom" constant="69" id="4Gl-vs-2AD"/>
                             <constraint firstItem="QK3-ht-Y8b" firstAttribute="top" secondItem="Htw-nd-db8" secondAttribute="top" constant="50" id="6ov-bK-VRg"/>
-                            <constraint firstItem="mq9-13-ccV" firstAttribute="trailing" secondItem="qpY-a7-to8" secondAttribute="trailing" id="9JA-eF-0Nq"/>
                             <constraint firstItem="qpY-a7-to8" firstAttribute="centerX" secondItem="uzd-sz-Ac4" secondAttribute="centerX" id="EeI-fh-DNK"/>
+                            <constraint firstItem="mq9-13-ccV" firstAttribute="height" secondItem="QK3-ht-Y8b" secondAttribute="height" id="Ehx-Fz-v6G"/>
                             <constraint firstItem="qpY-a7-to8" firstAttribute="top" secondItem="mq9-13-ccV" secondAttribute="bottom" constant="15" id="IrG-hm-eHO"/>
                             <constraint firstItem="uzd-sz-Ac4" firstAttribute="top" secondItem="qpY-a7-to8" secondAttribute="bottom" constant="85" id="JFr-JR-cWj"/>
+                            <constraint firstItem="mq9-13-ccV" firstAttribute="centerX" secondItem="Gpl-Aa-iaE" secondAttribute="centerX" id="LNp-Sb-RhL"/>
                             <constraint firstItem="mq9-13-ccV" firstAttribute="top" secondItem="QK3-ht-Y8b" secondAttribute="bottom" constant="15" id="Mm8-nc-Pmt"/>
                             <constraint firstItem="uzd-sz-Ac4" firstAttribute="centerX" secondItem="Gpl-Aa-iaE" secondAttribute="centerX" id="Q4o-UM-0zk"/>
-                            <constraint firstItem="mq9-13-ccV" firstAttribute="leading" secondItem="qpY-a7-to8" secondAttribute="leading" id="dj8-05-h18"/>
                             <constraint firstItem="mq9-13-ccV" firstAttribute="width" secondItem="mq9-13-ccV" secondAttribute="height" multiplier="1:1" id="fGD-He-1Ip"/>
-                            <constraint firstItem="QK3-ht-Y8b" firstAttribute="centerX" secondItem="mq9-13-ccV" secondAttribute="centerX" id="pLx-Xl-FIM"/>
+                            <constraint firstItem="qpY-a7-to8" firstAttribute="height" secondItem="QK3-ht-Y8b" secondAttribute="height" id="t90-eY-QtA"/>
+                            <constraint firstItem="mq9-13-ccV" firstAttribute="width" secondItem="QK3-ht-Y8b" secondAttribute="width" id="u7N-ED-T19"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="greenSign" destination="qpY-a7-to8" id="VgF-Dw-jUf"/>
-                        <outlet property="nextColorButton" destination="uzd-sz-Ac4" id="cSU-iA-ztS"/>
+                        <outlet property="nextColorButton" destination="uzd-sz-Ac4" id="hEP-Zg-hew"/>
                         <outlet property="redSign" destination="QK3-ht-Y8b" id="ZR5-Sg-jWI"/>
                         <outlet property="yellowSign" destination="mq9-13-ccV" id="mTO-Uf-bAR"/>
                     </connections>
